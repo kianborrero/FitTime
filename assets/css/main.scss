@@ -1,0 +1,92 @@
+// Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+
+$primary: #d1fae5;
+$secondary: #5eead4;
+$success: #28a745;
+$danger: #e74c3c;
+$warning: #f39c12;
+$info: #1abc9c;
+$light: #f0fdfa;
+$dark: #030712;
+
+$font-family-base: 'Poppins', sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$hero-bg: url('../imgs/hand-holding-dumbbell-high-angle.jpg');
+
+.hero {
+    position: relative;
+    background: $hero-bg no-repeat center center;
+    background-size: cover;
+    min-height: 80vh;
+    width: 100%;
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); // dark overlay
+        z-index: 0;
+    }
+
+    >* {
+        position: relative;
+        z-index: 1;
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+.schedule-table {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        background: url('../imgs/danielle-cerullo-CQfNt66ttZM-unsplash.jpg') no-repeat center center;
+        background-size: cover;
+        opacity: 0.3; // Controls image opacity
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    thead th,
+    tbody td,
+    tbody th {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        border: 1px solid #fff !important;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    thead th {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    tr {
+        text-align: center;
+    }
+}
